@@ -31,7 +31,7 @@ public class EmployeeController {
 	@Autowired
 	private RegionService regionService;
 
-	@GetMapping("/prova")
+	@GetMapping("/")
 	public String showEmployeeList(Model model) {
 		
 		model.addAttribute("employees", employeeService.listAll());
@@ -43,7 +43,7 @@ public class EmployeeController {
 		return "research_page";
 	}
 	
-	@PostMapping("/prova")
+	@PostMapping("/")
 	public String searchOnEmployeeList(
 			@RequestParam(required = false) String nomeDip,
 	        @RequestParam(required = false) String nomeLocation,
